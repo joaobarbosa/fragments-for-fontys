@@ -18,5 +18,10 @@
     <string name="title_activity_fragment">FragmentActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+    <string name="dismiss">Dismiss</string>
+    <string name="author_label">Author:</string>
+    <string name="author">João Barbosa</string>
+    <string name="github_link">Source on GitHub</string>
+    <string name="presentation_link">Go To Presentation</string>
+    <string name="signature">Mobile Computing @ Fontys Hogescholen - 2014</string>
 </resources>

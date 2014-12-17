@@ -8,12 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
 public class FragmentActivity extends ActionBarActivity {
 
     public static final String TITLE_EXTRA = "title";
     public static final String CONTENT_EXTRA = "content";
-    public static final String FRAGMENT_EXTRA = "fragment";
 
     private static String fragmentTitle;
     private static String fragmentContent;
