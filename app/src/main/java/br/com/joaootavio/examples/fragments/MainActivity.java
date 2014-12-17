@@ -21,7 +21,6 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         final RadioGroup contentGroup = (RadioGroup) findViewById(R.id.content_radio_group);
-        final RadioGroup fragmentGroup = (RadioGroup) findViewById(R.id.fragment_radio_group);
         Button loadButton = (Button) findViewById(R.id.load_button);
 
         loadButton.setOnClickListener(new View.OnClickListener() {
@@ -30,7 +29,6 @@ public class MainActivity extends ActionBarActivity {
                 String title, content;
                 int fragmentId;
                 int contentRadioId = contentGroup.getCheckedRadioButtonId();
-                int fragmentRadioId = fragmentGroup.getCheckedRadioButtonId();
 
                 switch(contentRadioId) {
                     case R.id.radio_lorem:
@@ -48,24 +46,10 @@ public class MainActivity extends ActionBarActivity {
                         break;
                 }
 
-                switch (fragmentRadioId) {
-                    case R.id.radio_fragment_a:
-                        fragmentId = R.layout.fragment_a;
-                        break;
-                    case R.id.radio_fragment_b:
-                        fragmentId = R.layout.fragment_b;
-                        break;
-                    default:
-                    case R.id.radio_fragment_c:
-                        fragmentId = R.layout.fragment_c;
-                        break;
-                }
-
                 Intent i = new Intent(MainActivity.this, FragmentActivity.class);
 
                 i.putExtra(FragmentActivity.TITLE_EXTRA, title);
                 i.putExtra(FragmentActivity.CONTENT_EXTRA, content);
-                i.putExtra(FragmentActivity.FRAGMENT_EXTRA, fragmentId);
 
                 MainActivity.this.startActivity(i);
             }

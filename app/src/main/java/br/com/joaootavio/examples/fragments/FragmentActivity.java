@@ -1,16 +1,12 @@
 package br.com.joaootavio.examples.fragments;
 
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
-import android.view.inputmethod.ExtractedTextRequest;
+import android.widget.TextView;
 
 
 public class FragmentActivity extends ActionBarActivity {
@@ -19,9 +15,8 @@ public class FragmentActivity extends ActionBarActivity {
     public static final String CONTENT_EXTRA = "content";
     public static final String FRAGMENT_EXTRA = "fragment";
 
-    private String fragmentTitle;
-    private String fragmentContent;
-    private int fragmentId;
+    private static String fragmentTitle;
+    private static String fragmentContent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,66 +25,37 @@ public class FragmentActivity extends ActionBarActivity {
 
         Bundle extras = getIntent().getExtras();
 
-        if (extras != null) {
-            fragmentTitle = extras.getString(TITLE_EXTRA);
-            fragmentContent = extras.getString(CONTENT_EXTRA);
-            fragmentId = extras.getInt(FRAGMENT_EXTRA);
+        if (extras == null) {
+            finish();
         }
+
+        fragmentTitle = extras.getString(TITLE_EXTRA);
+        fragmentContent = extras.getString(CONTENT_EXTRA);
 
         if (savedInstanceState == null) {
             Fragment instance;
 
-            switch (fragmentId) {
-                case R.layout.fragment_a:
-                    instance = new AFragment();
-                    break;
-                case R.layout.fragment_b:
-                    instance = new BFragment();
-                    break;
-                default:
-                case R.layout.fragment_c:
-                    instance = new CFragment();
-                    break;
-            }
-
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, instance)
+                    .add(R.id.container, new ExampleFragment())
                     .commit();
         }
     }
 
-    public static class AFragment extends Fragment {
+    public static class ExampleFragment extends Fragment {
 
-        public AFragment() {}
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_a, container, false);
-            return rootView;
-        }
-    }
-
-    public static class BFragment extends Fragment {
-
-        public BFragment() {}
+        public ExampleFragment() {}
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_b, container, false);
-            return rootView;
-        }
-    }
+            View rootView = inflater.inflate(R.layout.fragment_example, container, false);
 
-    public static class CFragment extends Fragment {
+            TextView title = (TextView) rootView.findViewById(R.id.fragment_a_title);
+            TextView content = (TextView) rootView.findViewById(R.id.fragment_a_content);
 
-        public CFragment() {}
+            title.setText(fragmentTitle);
+            content.setText(fragmentContent);
 
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_c, container, false);
             return rootView;
         }
     }
