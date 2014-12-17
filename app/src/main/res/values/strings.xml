@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Fragments</string>
+    <string name="action_credits">Credits</string>
+    <string name="content_label">Pick a content:</string>
+    <string name="fragment_label">Pick a fragment:</string>
+    <string name="load_fragment_button">Load fragment</string>
+    <string name="lorem_ipsum_title">Lorem Ipsum</string>
+    <string name="samuel_l_ipsum_title">Samuel L. Ipsum</string>
+    <string name="bacon_ipsum_title">Bacon Ipsum</string>
+    <string name="fragment_a">Fragment A</string>
+    <string name="fragment_b">Fragment B</string>
+    <string name="fragment_c">Fragment C</string>
+    <string name="lorem_ipsum_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec iaculis orci. Nunc mollis imperdiet maximus. Aenean ut nunc id lacus venenatis condimentum. Ut ac ultrices libero. Suspendisse consequat quam sed convallis vulputate. In quis auctor augue. Phasellus quis mauris et nulla iaculis bibendum ac auctor orci. Phasellus bibendum ornare leo, nec rutrum mauris auctor et. Duis porttitor eu ex vel eleifend. Donec ac vehicula felis. Cras facilisis risus eu ligula viverra convallis quis nec urna. Ut in tempus sem, hendrerit scelerisque ipsum. Ut non quam id leo pulvinar pretium eget non velit. Donec turpis eros, pretium sed tincidunt in, posuere sit amet tellus. Vestibulum eu luctus massa, eu ornare nisl.</string>
+    <string name="samuel_l_ipsum_paragraph">The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother\'s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.</string>
+    <string name="bacon_ipsum_paragraph">Bacon ipsum dolor amet turducken andouille beef ribs, shankle cow leberkas jerky brisket bresaola chicken short ribs ribeye t-bone. Meatball pastrami fatback corned beef drumstick jerky. Swine tongue tenderloin flank ground round. Pork belly sirloin turducken, ball tip frankfurter kevin pig ribeye rump kielbasa boudin t-bone pastrami flank shankle. Jerky tenderloin shankle beef corned beef filet mignon, venison cow brisket.</string>
+    <string name="title_activity_fragment">FragmentActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
